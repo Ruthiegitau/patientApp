@@ -1,24 +1,24 @@
 <div class="container">
-    <h1>My Patient App</h1>
+    <h1 class="header">My Patient App</h1>
     <form>
       <div>
         <input type="text" name="fname" #fname placeholder="First Name">
-      </div>
+      </div><br>
       <div>
         <input type="text" name="lname" #lname placeholder="Last Name">
-      </div>
+      </div><br>
       <div>
         <input type="text" name="phone" #phone placeholder="Phone Number">
-      </div>
+      </div><br>
       <div>
         <input type="email" name="email" #email placeholder="Email Address">
-      </div>
+      </div><br>
       <div>
         <input type="date" name="dob" #dob placeholder="dob">
-      </div>
+      </div><br>
       <div>
-        <input type="submit" (click) = "savePatient(fname.value,lname.value,phone.value,email.value,dob.value);">
-      </div>
+        <input type="submit" class="btn btn-primary" (click) = "savePatient(fname.value,lname.value,phone.value,email.value,dob.value);">
+      </div><br>
     </form>
 
     <table class="table table-bordered">
@@ -37,8 +37,8 @@
         <td>{{patient.phoneNumber}}</td>
         <td>{{patient.emailAddress}}</td>
         <td>{{patient.dateofBirth}}</td>
-        <td><button type="button" name="button" (click)="showDetails(patient)">Edit</button></td>
-        <td><button type="button" name="button" (click)="del(patient)">Delete</button></td>
+        <td><button type="button" name="button" (click)="showDetails(patient)" class="btn btn-primary">Edit</button></td>
+        <td><button type="button" class="btn btn-primary"name="button" (click)="del(patient)">Delete</button></td>
 
       </tr>
     </table>
@@ -49,25 +49,25 @@
       <div>
         <label>Enter Patient firstName:</label>
         <input [(ngModel)]="selectedPatient.firstName">
-      </div>
+      </div><br>
       <div>
         <label>Enter Patient LastName:</label>
         <input [(ngModel)]="selectedPatient.lastName">
-      </div>
+      </div><br>
       <div>
         <label>Enter Patient phoneNumber:</label>
         <input [(ngModel)]="selectedPatient.phoneNumber">
-      </div>
+      </div><br>
       <div>
         <label>Enter Patient emailAddress:</label>
         <input [(ngModel)]="selectedPatient.emailAddress">
-      </div>
+      </div><br>
       <div>
         <label>Enter Patient dateofBirth:</label>
         <input [(ngModel)]="selectedPatient.dateofBirth">
-      </div>
+      </div><br>
       <div>
         <button (click)="finishedEditing()">Done</button>
       </div>
-    </div>
+    </div><br>
   </div>

@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.header{
+  color: blue;
+  text-align: center;
+}
+
+body{
+  background-image: url("https://wallpaperscraft.com/image/dark_spot_background_texture_50611_1920x1080.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
