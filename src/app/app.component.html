@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>My Patient App</h1>
+    <form>
+      <div>
+        <input type="text" name="fname" #fname placeholder="First Name">
+      </div>
+      <div>
+        <input type="text" name="lname" #lname placeholder="Last Name">
+      </div>
+      <div>
+        <input type="text" name="phone" #phone placeholder="Phone Number">
+      </div>
+      <div>
+        <input type="email" name="email" #email placeholder="Email Address">
+      </div>
+      <div>
+        <input type="date" name="dob" #dob placeholder="dob">
+      </div>
+      <div>
+        <input type="submit" (click) = "savePatient(fname.value,lname.value,phone.value,email.value,dob.value);">
+      </div>
+    </form>
+
+
+    <div *ngFor="let currentPatient of patients">
+      <h3>{{ currentPatient.firstName }}</h3>
+      <button (click)="showDetails(currentPatient)">Edit</button>
+    </div>
+    <div *ngIf="selectedPatient">
+      <h1>Edit Patient</h1>
+      <div>
+        <label>Enter Patient Description:</label>
+        <input [(ngModel)]="selectedPatient.firstName">
+      </div>
+      <div>
+        <label>Enter Patient FirstName:</label>
+        <input [(ngModel)]="selectedPatient.lastName">
+        <button (click)="finishedEditing()">Done</button>
+      </div>
+      <div>
+        <label>Enter Patient LastName:</label>
+        <input [(ngModel)]="selectedPatient.phoneNumbe">
+        <button (click)="finishedEditing()">Done</button>
+      </div>
+    </div>
+  </div>
