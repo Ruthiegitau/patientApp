@@ -22,6 +22,12 @@ export class AppComponent {
   finishedEditing() {
     this.selectedPatient = null;
   }
+
+  del(deletePatient: Patient){
+    var i = this.patients.indexOf(deletePatient);
+      this.patients.splice(i,1);
+
+  }
 }
 
 export class Patient {

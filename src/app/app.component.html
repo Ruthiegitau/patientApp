@@ -29,6 +29,7 @@
         <th>email Address </th>
         <th>DOB </th>
         <th>Edit</th>
+        <th>Delete</th>
       </tr>
       <tr *ngFor="let patient of patients">
         <td>{{patient.firstName}}</td>
@@ -37,6 +38,8 @@
         <td>{{patient.emailAddress}}</td>
         <td>{{patient.dateofBirth}}</td>
         <td><button type="button" name="button" (click)="showDetails(patient)">Edit</button></td>
+        <td><button type="button" name="button" (click)="del(patient)">Delete</button></td>
+
       </tr>
     </table>
 
